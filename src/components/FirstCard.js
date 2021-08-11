@@ -2,26 +2,28 @@ import React, { Component } from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {Button} from 'react-bootstrap';
-import { NavLink, Link as NLink } from 'react-router-dom';
+import { NavLink as link  } from 'react-router-dom';
 
 
-class SingleCard extends Component {
+
+
+class FirstCard extends Component {
   state = {
-    img: [],
+    image: [],
     post: [],
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-}
+//   handleSubmit = (e) => {
+//     e.preventDefault();
+// }
 
 
   render() {
-    const { title, a, link, img, post } = this.state;
+    const { link, image, post } = this.state;
 
     return (
-      <Card className="cmb-4 card-lift">
-        <Card.Img variant="right" src={require("../assets/img.jpg")} style={{ height: '150px', color: "green"}} />
+      <Card  className=" card-container">
+        <Card.Img variant='top'  src={require("../assets/img.jpg").default} style={{ height: '150px', color: "green"}} />
 
         <Card.Body>
           <Card.Title>First Name</Card.Title>
@@ -29,12 +31,18 @@ class SingleCard extends Component {
            <p>Last name</p>
           <p>Office location</p>
           </Card.Text>
-          <Button variant="primary" handleSubmit={this.handleSubmit}>Rotate 
-          </Button>
+          {/* <Button variant="primary" handleSubmit={this.handleSubmit}>Rotate  */}
+          {/* <NavLink to="/SecondCard">
+            SecondCard
+          </NavLink> */}
+          {/* </Button> */}
+          <Link to="/SecondCard">SecondCard</Link>
+           
+          {/* <Link to="SecondCard">SecondCard</Link> */}
         </Card.Body>
       </Card>   
     );
   }
 }
 
-export default SingleCard;
+export default FirstCard;

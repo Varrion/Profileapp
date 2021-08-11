@@ -1,4 +1,29 @@
 img{
    width: 100px;
    height: 1000%; 
+
 }
+.card-container{
+   background-color: whitesmoke;
+   text-align: center;
+   margin-left: 600px;
+   margin-top: 20px;
+   padding-top: 50px;
+margin-right: 600px;
+padding-bottom: 10px;
+}
+
+.card-container1{
+   background-color: whitesmoke;
+   text-align: center;
+   margin-left: 600px;
+   margin-top: 20px;
+   padding-top: 50px;
+margin-right: 600px;
+padding-bottom: 10px;
+}
+
+.button-cancel{
+   position: left;
+}
+
